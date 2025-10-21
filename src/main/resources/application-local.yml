@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: finGradBackend
+  profiles:
+    active: local
+
+    liquibase:
+      enabled: false
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    com.fingrad: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+

@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: finGradBackend
+
+
+  liquibase:
+    enabled: false
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    com.fingrad: INFO
+    org.springframework.web: WARN
+    org.hibernate.SQL: WARN
+    org.hibernate.type.descriptor.sql.BasicBinder: WARN
+
+
+
+# Default configuration that can be overridden in production
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
